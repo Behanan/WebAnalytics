@@ -35,6 +35,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" language="javascript">
+        function checkform()
+        {
+            var f = document.forms["theform"].elements;
+            var cansubmit = true;
+
+            for (var i = 0; i < f.length; i++) {
+                if (f[i].value.length == 0) cansubmit = false;
+            }
+
+            if (cansubmit) {
+                document.getElementById('signup').disabled = false;
+            }
+        }
+    </script>
 
     <!-- LightSlider.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"
@@ -327,26 +342,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis
                                 repellendus assumenda consequatur aliquid harum nulla mollitia fugit rem aperiam.
                             </p>
-                            <form>
+                            <form name = "theform"> 
                                 <div class="mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Your Name"
+                                    <input type="text" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Your Name"
                                         required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control form-control-sm" placeholder="Your Email ID"
+                                    <input type="email" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Your Email ID"
                                         required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="tel" class="form-control form-control-sm" placeholder="Phone No"
+                                    <input type="tel" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Phone No"
                                         required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Course Name"
+                                    <input type="text" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Course Name"
                                         required>
                                 </div>
                                 <div class="mb-3">
                                     <input type="submit" class="btn btn-warning btn-block btn-sm"
-                                        id = "signup" value="Register Online Now" required>
+                                        id = "signup" onKeyup="checkform()" value="Register Online Now" required disabled= "disabled">
                                 </div>
                             </form>
                         </div>
@@ -638,29 +653,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="modal-body">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quos commodi?</p>
-                    <form>
-                        
-                    <div class="mb-3">
-                        <input type="text" class="form-control form-control-sm" placeholder="Your Name"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control form-control-sm" placeholder="Your Email ID"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="tel" class="form-control form-control-sm" placeholder="Phone No"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control form-control-sm" placeholder="Course Name"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="submit" class="btn btn-warning btn-block btn-sm"
-                            id = "signup" value="Register Online Now" required>
-                    </div>
-                    </form>
+<form name = "theform"> 
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Your Name"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Your Email ID"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Phone No"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Course Name"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="submit" class="btn btn-warning btn-block btn-sm"
+                                        id = "signup" onKeyup="checkform()" value="Register Online Now" required disabled= "disabled">
+                                </div>
+                            </form>
                 </div>
             </div>
         </div>
