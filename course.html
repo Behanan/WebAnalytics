@@ -48,14 +48,8 @@ dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
   event: "purchase",
   ecommerce1: {
-      transaction_id: "T_12345",
-      affiliation: "Google Merchandise Store",
-      value: 25.42,
-      tax: 4.90,
       user: "Indian",
-      shipping: 5.99,
       currency: "USD",
-      coupon: "SUMMER_SALE",
       items: [
        {
         item_id: "00AAA",
@@ -64,7 +58,6 @@ dataLayer.push({
         coupon: "SUMMER_FUN",
         currency: "USD",
         discount: 0.5,
-        index: 0,
         item_brand: "Sparx",
         item_category: "Sneakers",
         item_category2: "Shoes",
